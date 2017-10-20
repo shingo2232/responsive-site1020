@@ -1,0 +1,112 @@
+@import "compass";
+$baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;// colors
+$baseColor: #fdfcf6;
+$subColor: #becadb;
+$keyColor: #0081e2;
+$fontColor: #4c4c4c;
+
+
+/* Base
+------------------------------------------------------------*/
+html{ font-size: 62.5%; }
+
+body{
+  color: $fontColor;
+  font-size: 1.4rem;
+  font-family:$baseFontFamily;
+  line-height:1.6;
+  letter-spacing: 0.1em;
+  background-color: $baseColor;
+}
+
+header{
+    height: 500px;
+    background-image: url(../images/top_mini.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+main{
+        padding: 30px;
+    
+    .main_title {
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 30px;
+        font-size: 28px;
+        }
+    .show_case{
+        display:flex;
+        justify-content: space-between;
+    .box{
+        
+        width: 30%;
+        
+        .box_text,.box_title{
+            text-align: center;
+        }
+        .box_title{
+            background: $keyColor;
+            font-weight: bold;
+            color: #fff;
+            font-size: 20px;
+            padding: 10px;
+        }
+        .box_text{
+            padding: 30px;
+            background: #ddd;
+            height: 60px;
+        }
+      }
+   }
+}
+footer{
+        padding: 30px;
+        background-color: $subColor;
+        
+     .footer_title {
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 30px;
+        font-size: 28px;
+        }
+    
+    .button{
+          margin: auto;
+          text-align: center;
+          padding: 5px 0;
+          width: 180px;
+          display: block;
+          color: #FFF;
+          font-weight: bold;
+          background-color: $keyColor;
+          font-size: 1rem;
+          border-style: none;
+          text-decoration: none;
+          @include border-radius(5px);
+          
+    }
+    .button:hover {
+      @include opacity(0.8);
+    }
+}
+@media (max-width: 768px) {
+        header {
+            height: 250px;
+        }
+        
+        main {
+            .show_case{
+                flex-direction: column;
+                
+            .box{
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+     }
+  } 
+
+
+
